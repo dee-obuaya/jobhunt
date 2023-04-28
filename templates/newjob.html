@@ -1,0 +1,46 @@
+{% extends 'index.html' %}
+
+{% block title %} JobHunt - New Job{% endblock %}
+
+
+{% block content %}
+<div class="form-body">
+    <form method="post" action="{{ url_for('process_job_form') }}" class="row g-3 mx-auto"  enctype="multipart/form-data">
+        {{ form.csrf_token }}
+        {{ ckeditor.load() }}
+        {{ ckeditor.config(name='job_description') }}
+        <div class="row mb-3 pt-lg-5">
+            <label for="company-name-field" class="form-label">Company Name</label>
+            <div class="col-8 mx-auto">
+                {{ form.company(class_='form-control')}}
+                <!-- <input type="text" class="" id="company-name-field"> -->
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="company-image-field" class="form-label">Company Image</label>
+            <div class="col-8 mx-auto">
+                {{ form.company_img(class_='form-control')}}
+                <!-- <input type="file" class="form-control" id="company-image-field"> -->
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="job-title-field" class="form-label">Job Title</label>
+            <div class="col-8 mx-auto">
+                {{ form.job_title(class_='form-control')}}
+                <!-- <input type="text" class="form-control" id="job-title-field"> -->
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="job-desc-field" class="form-label">Job Description</label>
+            <div class="col-8 mx-auto">
+                {{ form.job_description(class_='form-control')}}
+                <!-- <textarea name="job-desc" id="job-desc-field" class="form-control" rows="15"
+                    placeholder="Job Description"></textarea> -->
+            </div>
+        </div>
+        <div class="d-grid gap-1 col-6 w-25 mx-auto">
+            <button class="btn new-job-btn" type="submit">Submit</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

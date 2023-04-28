@@ -1,0 +1,35 @@
+{% extends 'index.html' %}
+
+{% block title %} JobHunt - Submissions {% endblock %}
+
+
+{% block content %}
+<div class="job-body">
+    {% for job in jobs %}
+    <div class="row mt-5">
+        <div class="col-md-2 job-image">
+            <img src="{{ url_for('static', filename=job.company_img) }}" alt="" class="img-fluid rounded float-start">
+        </div>
+        <div class="col-auto job-content pt-3">
+            <h3>{{ job.company }}</h3>
+            <h4>{{ job.job_title}}</h4>
+            <p class="text-wrap ps-0 visually-hidden">
+                <small>{{ job.id }}</small>
+                {{ job.job_description|safe }}
+            </p>
+        </div>
+        {% if not is_approved %}
+        <div class="d-grid gap-2 col-6 mx-auto">
+            <div class="row">
+                <a href="{{ url_for('approve_job', job_id=job.id) }}" class="btn btn-outline-success col mb-lg-0 mb-1">Approve</a>
+                <a href="{{ url_for('reject_job', job_id=job.id) }}" class="btn btn-outline-danger col ms-lg-2 ms-0">Reject</a>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
+
+<script>
+</script>

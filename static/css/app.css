@@ -1,0 +1,238 @@
+* {
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+    letter-spacing: 0.25rem;
+    transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+}
+
+.login-body {
+    height: 100vh;
+    width: 100%;
+    background: no-repeat center/100% url("../images/joanna-kosinska-DJnjYbQCEMg-unsplash.jpg");
+    display: grid;
+}
+
+.login-body .row {
+    align-self: center;
+}
+
+.login-body .row .card-col .card .card-header {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.login-body .row .card-col .card .card-body form .row input {
+    letter-spacing: normal;
+    font-size: 16px;
+}
+
+.login-body .row .card-col .card .card-body form .row input:focus {
+    box-shadow: none;
+    border: 1px solid;
+}
+
+.login-body .row .card-col .card .card-body form button.login-button {
+    border: 1px solid;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+}
+
+.login-body .row .card-col .card .card-body form button.login-button:hover {
+    color: #fff;
+    background-color: #000;
+}
+
+#body {
+    height: 100%;
+    width: 100%;
+}
+
+#body nav {
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
+}
+
+#body nav button.navbar-toggler:focus {
+    border: 1px solid;
+    box-shadow: none;
+}
+
+#body nav .navbar-collapse .nav-link {
+    font-size: 18px;
+    font-weight: 300;
+    padding: 0 auto;
+}
+
+#body nav .navbar-collapse .nav-link:hover {
+    font-weight: 400;
+}
+
+#body nav .navbar-collapse .nav-link:active {
+    font-weight: 600;
+}
+
+#home-content {
+    height: 100%;
+}
+
+#home-content .card {
+    cursor: pointer;
+    max-width: 100em;
+}
+
+#home-content .card .card-image {
+    justify-content: center;
+    border-right: 0.5px solid rgba(0, 0, 0, 0.2);
+}
+
+#home-content .card .card-image img {
+    width: 200px;
+    height: 200px;
+}
+
+#home-content .card div {
+    padding: 0.2rem;
+}
+
+#home-content .card div a.card-body {
+    text-decoration: none;
+}
+
+#home-content .card div a.card-body:hover {
+    color: #000;
+}
+
+#home-content .card div a.card-body .card-title {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+#home-content .card div a.card-body .card-subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+#home-content .card div a.card-body .card-text.text-truncate {
+    letter-spacing: 0.05em;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+#home-content .card div a.card-body .card-text small {
+    letter-spacing: 0.1em;
+}
+
+/* #body .form-body {
+    padding: 3rem;
+} */
+
+#body .form-body form {
+    padding: 1.3em;
+    border: 0.2px solid rgba(0, 0, 0, 0.2);
+}
+
+#body .form-body form .row {
+    margin: auto;
+}
+
+#body .form-body form .row label {
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+}
+
+#body .form-body form .row input {
+    letter-spacing: normal;
+}
+
+#body .form-body form .row input:focus, #body .form-body form .row textarea:focus {
+    box-shadow: none;
+    border: 0.8px solid;
+}
+
+#body .form-body form .new-job-btn {
+    border: 1px solid black;
+    text-transform: uppercase;
+}
+
+#body .form-body form .new-job-btn:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+#body .job-body .row .job-image {
+    padding: 1rem;
+    margin: 0 1rem;
+}
+
+#body .job-body .row .job-content {
+    height: fit-content;
+    max-width: 75vw;
+}
+
+#body .job-body .row .job-content h3 {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 28px;
+}
+
+#body .job-body .row .job-content h4 {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 25px;
+}
+
+#body .job-body .row .job-content p {
+    font-weight: 400;
+    font-size: 14px;
+    padding: 1em;
+    letter-spacing: 0.15em;
+}
+
+#body .job-body .row .job-content ul li {
+    list-style: disc;
+}
+
+@media (width < 393px) {
+    #body nav .navbar-brand {
+        width: 10em;
+    }
+    #body .job-body .row .job-content {
+        font-size: 25px;
+    }
+}
+
+@media (width < 768px) {
+    #body .job-body .row {
+        display: grid;
+        justify-content: center;
+    }
+    #body .job-body .row .job-image {
+        width: fit-content;
+        justify-self: center;
+    }
+    #body .job-body .row .job-content {
+        justify-self: center;
+        /* text-align: center; */
+    }
+}
+
+@media (width < 1280px) {
+    .login-body {
+        height: 100vh;
+        width: 100%;
+        background: no-repeat center/100% 100% url("../images/joanna-kosinska-DJnjYbQCEMg-unsplash.jpg");
+        display: grid;
+    }
+}

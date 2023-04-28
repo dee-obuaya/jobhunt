@@ -1,0 +1,21 @@
+{% extends 'index.html' %}
+
+{% block title %} JobHunt - {{ job.job_title}} {% endblock %}
+
+
+{% block content %}
+<div class="job-body">
+    <div class="row mt-5">
+        <div class="col-md-2 job-image">
+            <img src="{{ url_for('static', filename=job.company_img) }}" alt="" class="img-fluid rounded float-start">
+        </div>
+        <div class="col-auto job-content pt-3">
+            <h3>{{ job.company }}</h3>
+            <h4>{{ job.job_title}}</h4>
+            <p class="text-wrap ps-0 visually-hidden">
+                {{ job.job_description|safe }}
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}

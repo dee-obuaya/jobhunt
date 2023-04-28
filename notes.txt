@@ -1,0 +1,20 @@
+- new column 'isApproved'
+- isApproved defaults to False
+- only show records where isApproved is True
+- if an update is waiting approval, the db version is queried
+
+
+On an Admin Account:
+- settings has a new submenu 'Changes'
+- shows a table of additions/updates where isApproved is False
+- the table will have and approve/reject column 
+	If Rejected:
+		- db rollback
+	If Approved:
+		- db update/insert
+
+
+f12fdb04282c1d25cb4da6f73c293c49d8f1fa5ccf05b78ca708430476fc3f74
+
+
+2000x737
